@@ -99,7 +99,7 @@
             bindings = <&to_en>;
         };
 
-        combo_conv_to_jp {
+        combo_conv_to_jp_h {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&conv_to_jp_h>;
@@ -181,11 +181,20 @@
 
         layer_3 {
             display-name = "Fn";
+
+            // display brightness: f14, f15
+            // media: f6 (rw), f7 (ff), f8 (stop)
+            // -----------------------------------------------------------------------------------
+            // |   f14   |  f15  |      |    |     |   |    |  f1  |  f2  | f3 | f4  | f5  | f6  |
+            // | VOLDOWN | VOLUP | MUTE |    |     |   |    |  f7  |  f8  | f9 | f10 | f11 | f12 |
+            // |    f6   |   f8  |  f7  |    |     |   |    |  RST | BOOT |    |     |     |     |
+            //                   |      |    |     |   |    |      |      |    |
+
             bindings = <
-&trans  &kp F1      &kp F2  &kp F3  &kp F4      &kp F5         &kp F6       &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
-&trans  &bt BT_CLR  &trans  &trans  &sys_reset  &bootloader    &bootloader  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans  &trans      &trans  &trans  &trans      &trans         &trans       &trans  &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                            &trans  &trans      &trans         &trans       &trans  &trans
+&kp F14      &kp F15      &trans     &trans  &trans  &trans    &kp F1     &kp F2      &kp F3 &kp F5  &kp F5  &kp F6
+&kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &trans  &trans  &trans    &kp F7     &kp F8      &kp F9 &kp F10 &kp F11 &kp F12
+&kp F6       &kp F8       &kp F7     &trans  &trans  &trans    &sys_reset &bootloader &trans &trans  &trans  &trans
+                                     &trans  &trans  &trans    &trans &trans  &trans
             >;
         };
     };
