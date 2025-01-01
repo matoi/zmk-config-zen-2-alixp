@@ -18,6 +18,10 @@
     };
 };
 
+&mt {
+        flavor = "balanced";
+};
+
 / {
     behaviors {
         td0: td0 {
@@ -26,10 +30,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-    };
-
-    &mt {
-        flavor = "balanced";
     };
 
     macros {
