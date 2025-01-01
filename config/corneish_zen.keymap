@@ -28,6 +28,10 @@
         };
     };
 
+    &mt {
+        flavor: "balanced";
+    };
+
     macros {
         to_jp: to_jp {
             compatible = "zmk,behavior-macro";
