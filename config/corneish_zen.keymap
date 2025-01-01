@@ -124,6 +124,7 @@
         default_layer {
             display-name = "HROW-M";
 
+            // Original
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -131,12 +132,26 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             // Home row mods for emacsen and tenting
+            // QWERTY Home row mods
             // --------------------------------------------------------------------------------------------------------------------------
             // |       Q  |       W  |       E  |       R  |  T  |  TAB  |   | BKSP  |  Y  |       U  |       I  |        O  |       P  |
             // | CTRL, A  | SHFT, S  |  ALT, D  |  GUI, F  |  G  |   `   |   |   \   |  H  |  GUI, J  |  ALT, K  |  SHFT, L  | CTRL, ;  |
             // |       Z  |       X  |       C  |       V  |  B  | SHFT  |   |   '   |  N  |       M  |       ,  |        .  |       /  |
             //                                  |      GUI | SPC |  LWR  |   |  RSE  | ENT |      ALT |
+/*             bindings = < */
+/* &kp Q        &kp W        &kp E       &kp R        &kp T        &kp TAB        &kp BSPC  &kp Y        &kp U        &kp I       &kp O        &kp P */
+/* &mt LCTRL A  &mt LSHFT S  &mt LALT D  &mt LGUI F   &kp G        &kp GRAVE      &kp BSLH  &kp H        &mt RALT K   &mt RGUI J  &mt RSHFT L  &mt RCTRL SEMI */
+/* &kp Z        &kp X        &kp      C  &kp V        &kp B        &td0           &kp SQT   &kp N        &kp M        &kp COMMA   &kp DOT      &kp SLASH */
+/*                                       &kp LGUI     &lt 3 SPACE  &mo 1          &mo 2     &lt 3 ENTER  &kp RGUI */
+/*             >; */
 
+            // Home row mods for emacsen and tenting
+            // ONISHI Home row mods
+            // --------------------------------------------------------------------------------------------------------------------------
+            // |       Q  |       W  |       E  |       R  |  T  |  TAB  |   | BKSP  |  Y  |       U  |       I  |        O  |       P  |
+            // | CTRL, A  | SHFT, S  |  ALT, D  |  GUI, F  |  G  |   `   |   |   \   |  H  |  GUI, J  |  ALT, K  |  SHFT, L  | CTRL, ;  |
+            // |       Z  |       X  |       C  |       V  |  B  | SHFT  |   |   '   |  N  |       M  |       ,  |        .  |       /  |
+            //                                  |      GUI | SPC |  LWR  |   |  RSE  | ENT |      ALT |
             bindings = <
 &kp Q        &kp W        &kp E       &kp R        &kp T        &kp TAB        &kp BSPC  &kp Y        &kp U        &kp I       &kp O        &kp P
 &mt LCTRL A  &mt LSHFT S  &mt LALT D  &mt LGUI F   &kp G        &kp GRAVE      &kp BSLH  &kp H        &mt RALT K   &mt RGUI J  &mt RSHFT L  &mt RCTRL SEMI
