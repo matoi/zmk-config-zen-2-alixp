@@ -92,13 +92,13 @@
         combo_conv_to_jp {
             timeout-ms = <50>;
             key-positions = <7 9>;
-            bindings = <&to_conv_jp>;
+            bindings = <&conv_to_jp>;
         };
 
         combo_conv_to_en {
             timeout-ms = <50>;
             key-positions = <7 11>;
-            bindings = <&to_conv_en>;
+            bindings = <&conv_to_en>;
         };
     };
 
