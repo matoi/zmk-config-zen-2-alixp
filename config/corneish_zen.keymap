@@ -40,14 +40,32 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+
+        to_en: to_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SEMI>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
         combo_to_jp {
             timeout-ms = <50>;
-            key-positions = <8 9>;
+            key-positions = <40 21>;
             bindings = <&to_jp>;
+        };
+
+        combo_to_en {
+            timeout-ms = <50>;
+            key-positions = <40 24>;
+            bindings = <&to_en>;
         };
     };
 
