@@ -53,12 +53,22 @@
                 ;
         };
 
-        conv_to_jp: conv_to_jp {
+        conv_to_jp_h: conv_to_jp_h {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp J>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        conv_to_jp_k: conv_to_jp_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp K>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -91,8 +101,14 @@
 
         combo_conv_to_jp {
             timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&conv_to_jp_h>;
+        };
+
+        combo_conv_to_jp_k {
+            timeout-ms = <50>;
             key-positions = <7 9>;
-            bindings = <&conv_to_jp>;
+            bindings = <&conv_to_jp_k>;
         };
 
         combo_conv_to_en {
