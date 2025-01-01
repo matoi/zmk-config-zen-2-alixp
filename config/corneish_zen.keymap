@@ -28,6 +28,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_to_jp {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp LCTRL &kp LSFT &kp J>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -45,7 +54,7 @@
             // |       Q  |       W  |       E  |       R  |  T  |  TAB  |   | BKSP  |  Y  |       U  |       I  |        O  |       P  |
             // | CTRL, A  | SHFT, S  |  ALT, D  |  GUI, F  |  G  |   `   |   |   \   |  H  |  GUI, J  |  ALT, K  |  SHFT, L  | CTRL, ;  |
             // |       Z  |       X  |       C  |       V  |  B  | SHFT  |   |   '   |  N  |       M  |       ,  |        .  |       /  |
-            //                                  |      SPC | GUI |  LWR  |   |  RSE  | ALT |      ENT |
+            //                                  |      GUI | SPC |  LWR  |   |  RSE  | ENT |      ALT |
 
             bindings = <
 &kp Q        &kp W        &kp E       &kp R        &kp T        &kp TAB        &kp BSPC  &kp Y        &kp U        &kp I       &kp O        &kp P
