@@ -52,20 +52,53 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+
+        conv_to_jp: conv_to_jp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp J>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        conv_to_en: conv_to_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp SEMI>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
+
         combo_to_jp {
             timeout-ms = <50>;
-            key-positions = <40 21>;
+            key-positions = <8 9>;
             bindings = <&to_jp>;
         };
 
         combo_to_en {
             timeout-ms = <50>;
-            key-positions = <40 24>;
+            key-positions = <10 11>;
             bindings = <&to_en>;
+        };
+
+        combo_conv_to_jp {
+            timeout-ms = <50>;
+            key-positions = <7 9>;
+            bindings = <&to_conv_jp>;
+        };
+
+        combo_conv_to_en {
+            timeout-ms = <50>;
+            key-positions = <7 11>;
+            bindings = <&to_conv_en>;
         };
     };
 
