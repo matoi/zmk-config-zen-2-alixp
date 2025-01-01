@@ -150,13 +150,13 @@
             // --------------------------------------------------------------------------------------------------------------------------------------
             // |       Q  |       L  |       U  |       ,  |  .        |  TAB  |   | BKSP  |  F        |       W  |       R  |        Y  |       P  |
             // | CTRL, E  | SHFT, I  |  ALT, A  |  GUI, O  |  -        |   `   |   |   \   |  K        |  GUI, T  |  ALT, N  |  SHFT, S  | CTRL, H  |
-            // |       Z  |       X  |       C  |       V  |  ;        | SHFT  |   |   '   |  G        |       D  |       M  |        J  |       B  |
-            //                                  |      GUI | SPC (MO3) |  LWR  |   |  RSE  | ENT (MO3) |      ALT |
+            // |       Z  |       X  |       C  |       V  |  ;        |   F5  |   |   '   |  G        |       D  |       M  |        J  |       B  |
+            //                                  |      MO2 | SPC (MO3) |  MO1  |   |  MO2  | ENT (MO3) |      MO1 |
             bindings = <
-&kp       Q  &kp       L  &kp      U  &kp      COMMA  &kp     DOT  &kp    TAB    &kp BSPC  &kp       F  &kp      W  &kp      R  &kp       Y  &kp       P
-&mt LCTRL E  &mt LSHFT I  &mt LALT A  &mt LGUI     O  &kp   MINUS  &kp  GRAVE    &kp BSLH  &kp       K  &mt RALT T  &mt RGUI N  &mt RSHFT S  &mt RCTRL H
-&kp       Z  &kp       X  &kp      C  &kp          V  &kp    SEMI  &td0          &kp  SQT  &kp       G  &kp      D  &kp      M  &kp       J  &kp       B
-                                      &mo 2           &lt 3 SPACE  &mo 1         &mo 2     &lt 3 ENTER  &mo 1
+&kp       Q  &kp       L  &kp      U  &kp      COMMA  &kp     DOT  &kp    TAB     &kp BSPC  &kp       F  &kp      W  &kp      R  &kp       Y  &kp       P
+&mt LCTRL E  &mt LSHFT I  &mt LALT A  &mt LGUI     O  &kp   MINUS  &kp  GRAVE     &kp BSLH  &kp       K  &mt RALT T  &mt RGUI N  &mt RSHFT S  &mt RCTRL H
+&kp       Z  &kp       X  &kp      C  &kp          V  &kp    SEMI  &kp     F5     &kp  SQT  &kp       G  &kp      D  &kp      M  &kp       J  &kp       B
+                                      &mo 2           &lt 3 SPACE  &mo 1          &mo 2     &lt 3 ENTER  &mo 1
             >;
         };
 
