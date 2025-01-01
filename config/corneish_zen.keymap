@@ -29,7 +29,7 @@
     };
 
     &mt {
-        flavor: "balanced";
+        flavor = "balanced";
     };
 
     macros {
