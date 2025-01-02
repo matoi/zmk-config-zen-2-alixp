@@ -182,7 +182,7 @@
 &kp       Q  &kp       L  &kp      U  &kp      COMMA  &kp     DOT  &kp    TAB     &kp BSPC  &kp       F  &kp      W  &kp      R  &kp       Y  &kp       P
 &mt LCTRL E  &mt LSHFT I  &mt LALT A  &mt LGUI     O  &kp   MINUS  &kp  GRAVE     &kp BSLH  &kp       K  &mt RALT T  &mt RGUI N  &mt RSHFT S  &mt RCTRL H
 &kp       Z  &kp       X  &kp      C  &kp          V  &kp    SEMI  &kp     F5     &kp  SQT  &kp       G  &kp      D  &kp      M  &kp       J  &kp       B
-                                      &mo 2           &lt 3 SPACE  &mo 1          &mo 2     &lt 3 ENTER  &mo 1
+                                      &lt 3    SPACE  &mo 2        &mo 1          &mo 1     &mo 2        &lt 3 ENTER
             >;
         };
 
@@ -232,10 +232,10 @@
             //                   |      |    |     |           |    |      |      |    |
 
             bindings = <
-&kp F14      &kp F15      &trans     &trans  &trans  &trans      &kp F1     &kp F2      &kp F3 &kp F5  &kp F5  &kp F6
-&kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans  &trans  &trans      &kp F7     &kp F8      &kp F9 &kp F10 &kp F11 &kp F12
-&kp F6       &kp F8       &kp F7     &trans  &trans  &trans      &sys_reset &bootloader &trans &trans  &trans  &trans
-                                     &trans  &trans  &trans      &trans     &trans      &trans
+            &kp F14      &kp F15      &trans     &trans  &trans  &trans     &trans     &trans      &trans  &trans   &trans   &trans
+            &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans  &trans  &trans     &trans     &trans      &trans  &trans   &kp UP   &trans
+            &kp F6       &kp F8       &kp F7     &trans  &trans  &trans     &sys_reset &bootloader &trans  &kp LEFT &kp DOWN &kp RIGHT
+                                     &trans  &trans  &trans      &trans     &trans     &trans
             >;
         };
     };
