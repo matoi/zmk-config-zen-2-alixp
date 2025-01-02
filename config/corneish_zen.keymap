@@ -174,13 +174,13 @@
             // Home row mods for emacsen and tenting
             // ONISHI Home row mods
             // --------------------------------------------------------------------------------------------------------------------------------------
-            // |       Q  |       L  |       U  |       ,  |  .        |  TAB  |   | BKSP  |  F        |       W  |       R  |        Y  |       P  |
-            // | CTRL, E  | SHFT, I  |  ALT, A  |  GUI, O  |  -        |   `   |   |   \   |  K        |  GUI, T  |  ALT, N  |  SHFT, S  | CTRL, H  |
+            // |       Q  |       L  |       U  |       ,  |  .        |   `   |   | BKSP  |  F        |       W  |       R  |        Y  |       P  |
+            // | CTRL, E  | SHFT, I  |  ALT, A  |  GUI, O  |  -        |  TAB  |   |   \   |  K        |  GUI, T  |  ALT, N  |  SHFT, S  | CTRL, H  |
             // |       Z  |       X  |       C  |       V  |  ;        |   F5  |   |   '   |  G        |       D  |       M  |        J  |       B  |
             //                                  |      MO2 | SPC (MO3) |  MO1  |   |  MO2  | ENT (MO3) |      MO1 |
             bindings = <
-&kp       Q  &kp       L  &kp      U  &kp      COMMA  &kp     DOT  &kp    TAB     &kp BSPC  &kp       F  &kp      W  &kp      R  &kp       Y  &kp       P
-&mt LCTRL E  &mt LSHFT I  &mt LALT A  &mt LGUI     O  &kp   MINUS  &kp  GRAVE     &kp BSLH  &kp       K  &mt RALT T  &mt RGUI N  &mt RSHFT S  &mt RCTRL H
+&kp       Q  &kp       L  &kp      U  &kp      COMMA  &kp     DOT  &kp  GRAVE     &kp BSPC  &kp       F  &kp      W  &kp      R  &kp       Y  &kp       P
+&mt LCTRL E  &mt LSHFT I  &mt LALT A  &mt LGUI     O  &kp   MINUS  &kp    TAB     &kp BSLH  &kp       K  &mt RALT T  &mt RGUI N  &mt RSHFT S  &mt RCTRL H
 &kp       Z  &kp       X  &kp      C  &kp          V  &kp    SEMI  &kp     F5     &kp  SQT  &kp       G  &kp      D  &kp      M  &kp       J  &kp       B
                                       &lt 3    SPACE  &mo 2        &mo 1          &mo 1     &mo 2        &lt 3 ENTER
             >;
@@ -196,7 +196,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&kp N1         &kp N2       &kp N3        &kp N4        &kp N5    &kp GRAVE     &kp BSPC  &kp N6    &kp N7   &kp N8         &kp N9         &kp N0
 &trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
                                          &trans        &trans        &trans             &kp INS          &kp DEL          &trans
@@ -213,9 +213,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp N1    &kp N2    &kp N3   &kp N4   &kp N5    &kp TAB      &kp BSPC  &kp N6   &kp N7   &kp N8   &kp N9    &kp N0
-&kp LCTRL &kp LSHFT &kp LALT &kp LGUI &kp MINUS &kp GRAVE    &kp SLASH &none    &kp RALT &kp RGUI &kp RSHFT &kp RCTRL
-&none     &none     &none    &none    &none     &none        &none     &none    &none    &none    &none     &none
+&kp EXCL        &kp AT     &kp HASH  &kp DLLR        &kp PRCNT &none     &none  &kp CARET &kp AMPS      &kp ASTRK      &kp LPAR        &kp RPAR
+&mt LCTRL TILDE &kp LSHFT  &kp LALT  &mt LGUI UNDER  &kp PLUS  &none     &none  &kp QMARK &mt RALT DQT  &mt RGUI LBRC  &mt RSHFT RBRC  &mt RCTRL PIPE
+&kp GRAVE       &none      &none     &kp MINUS       &kp EQUAL &none     &none  &kp FSLH  &kp SQT       &kp LBKT       &kp RBKT        &kp BSLH
                              &trans   &trans    &trans       &trans    &trans   &trans
             >;
         };
