@@ -159,8 +159,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "HROW-M";
-
             // Original
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
@@ -189,12 +187,21 @@
             // | CTRL, E  | SHFT, I  |  ALT, A  |  GUI, O  |  -        |  TAB  |   |   \   |  K        |  GUI, T  |  ALT, N  |  SHFT, S  | CTRL, H  |
             // |       Z  |       X  |       C  |       V  |  ;        |   F5  |   |   '   |  G        |       D  |       M  |        J  |       B  |
             //                                  |      MO2 | SPC (MO3) |  MO1  |   |  MO2  | ENT (MO3) |      MO1 |
+            /* display-name = "HROW-M"; */
 /*             bindings = < */
 /* &kp       Q  &kp       L  &kp      U  &kp      COMMA  &kp     DOT  &kp  GRAVE     &kp BSPC  &kp       F  &kp      W  &kp      R  &kp       Y  &kp       P */
 /* &rpi LCTRL E  &rpi LSHFT I  &rpi LALT A  &rpi LGUI     O  &kp   MINUS  &kp    TAB     &kp BSLH  &kp       K  &rpi RALT T  &rpi RGUI N  &rpi RSHFT S  &rpi RCTRL H */
 /* &kp       Z  &kp       X  &kp      C  &kp          V  &kp    SEMI  &kp     F5     &kp  SQT  &kp       G  &kp      D  &kp      M  &kp       J  &kp       B */
 /*                                       &lt 3    SPACE  &mo 2        &mo 1          &mo 1     &mo 2        &lt 3 ENTER */
             /*             >; */
+
+            // QWERTY
+            // -----------------------------------------------------------------------------------------------------------------------------
+            // |  TAB  |  Q  |  W  |  E         |  R        |  T         |       |  Y         |  U        |  I        |  O  |  P  |  BSPC  |
+            // | CTRL  |  A  |  S  |  D         |  F        |  F         |       |  H         |  K        |  K        |  L  |  :  |    '   |
+            // | SHFT  |  Z  |  X  |  C         |  V        |  B         |       |  N         |  M        |  ,        |  .  |  /  |  SHFT  |
+            //                     |  ALT (MO1) | GUI (MO3) |  SPC (MO1) |       |  ENT (MO1) | ALT (MO3) | GUI (MO1) |
+            display-name = "QWERTY";
             bindings = <
             &kp TAB   &kp Q  &kp W  &kp E      &kp R      &kp T          &kp Y       &kp U      &kp I      &kp O   &kp P    &kp BSPC
             &kp LCTRL &kp A  &kp S  &kp D      &kp F      &kp G          &kp H       &kp J      &kp K      &kp L   &kp SEMI &kp SQT
@@ -204,31 +211,39 @@
         };
 
         lower_layer {
-            display-name = "NUMSYM";
-
             // -----------------------------------------------------------------------------------------
             // |  1  |  2  |  3  |  4  |  5  |     |   |    |  6  |  7  |  8  |  9  |  0  |
             // |  !  |  @  |  #  |  $  |  %  |     |   |    |  ^  |  &  |  *  |  (  |  )  |
             // |  `  |  ~  |     |     |     |     |   |    |     |  -  |  _  |  +  |  =  |
             //
+/*             display-name = "NUMSYM"; */
+/*             bindings = < */
+/* &kp N1         &kp N2       &kp N3        &kp N4        &kp N5    &none     &none  &kp N6    &kp N7        &kp N8         &kp N9         &kp N0 */
+/* &rpi LCTRL EXCL &rpi LSHFT AT &rpi LALT HASH &rpi LGUI DLLR &kp PRCNT &none     &none  &kp CARET &rpi RALT AMPS &rpi RGUI ASTRK &rpi RSHFT LPAR &rpi RCTRL RPAR */
+/* &kp GRAVE      &kp TILDE    &none         &none         &none     &none     &none  &none     &kp MINUS     &kp UNDER      &kp PLUS       &kp EQUAL */
+/*                                          &trans        &trans        &trans             &trans          &trans          &trans */
+/*             >; */
 
+            // --------------------------------------------------------------------------------
+            // |  `  |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  | BSPC |
+            // |  ~  |  !  |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |      |
+            // |     |     |     |  -  |  _  |     |     |     |  =  |  +  |     |     |      |
+            display-name = "NUMBER";
             bindings = <
-&kp N1         &kp N2       &kp N3        &kp N4        &kp N5    &none     &none  &kp N6    &kp N7        &kp N8         &kp N9         &kp N0
-&rpi LCTRL EXCL &rpi LSHFT AT &rpi LALT HASH &rpi LGUI DLLR &kp PRCNT &none     &none  &kp CARET &rpi RALT AMPS &rpi RGUI ASTRK &rpi RSHFT LPAR &rpi RCTRL RPAR
-&kp GRAVE      &kp TILDE    &none         &none         &none     &none     &none  &none     &kp MINUS     &kp UNDER      &kp PLUS       &kp EQUAL
-                                         &trans        &trans        &trans             &trans          &trans          &trans
+&kp GRAVE &kp N1   &kp N2 &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
+&kp TILDE &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &none
+&kp LSHFT &none    &none  &kp MINUS &kp UNDER &none          &none     &kp EQUAL &kp PLUS  &none    &none    &kp RSHFT
+                          &trans    &trans    &trans         &trans    &trans    &trans
             >;
         };
 
         raise_layer {
-            display-name = "SYMBOL";
-
             // -----------------------------------------------------------------------------------------
             // |  `   |      |  -  |  =  |     |     |    |     |  ?  |  "  |  {  |  }   | '|'  |
             // | CTRL | SHFT | ALT | GUI |     |     |    |     |     | ALT | GUI | SHFT | CTRL |
             // |  ~   |      |  _  |  +  |     |     |    |     |  /  |  '  |  [  |  ]   |  \   |
             //
-
+            display-name = "SYMBOL";
             bindings = <
 &kp GRAVE  &none      &kp MINUS &kp EQUAL  &none     &none     &none  &kp QMARK &kp DQT  &kp LBRC &kp RBRC  &kp PIPE
 &kp LCTRL  &kp LSHFT  &kp LALT  &kp LGUI   &none     &none     &none  &none     &kp RALT &kp RGUI &kp RSHFT &kp RCTRL
